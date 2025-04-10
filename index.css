@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #f0f2f0, #e0e5e8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 15px; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+    padding: 70px; 
+    text-align: center;
+    max-width: 900px;
+    width: 95%;
+    position: relative;
+}
+
+h1 {
+    color: #2e3138;
+    margin-bottom: 50px;
+    font-size: 3em; 
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0 #ddd;
+    opacity: 0;
+    animation: fadeInDown 1s ease-out 0.5s forwards; 
+}
+
+.person-card-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+}
+
+.person-card {
+    background: linear-gradient(45deg, #e3f2fd, #fffde7); 
+    border-radius: 10px;
+    padding: 40px; 
+    margin-bottom: 40px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: calc(0.3s * var(--card-index) + 0.8s); 
+    cursor: pointer; 
+}
+
+.person-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.person-card h2 {
+    color: #1a237e; 
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 0.8px;
+}
+
+.person-card p {
+    color: #455a64; 
+    margin-bottom: 12px;
+    font-size: 1.15em;
+}
+
+.highlight {
+    color: #00acc1;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0 #b2ebf2;
+}
+
+.separator {
+    border-top: 3px dashed #90a4ae; 
+    margin: 50px 0;
+    opacity: 0.6;
+}
+
+.cta-message {
+    color: #546e7a;
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.8s forwards; 
+
+.star {
+    position: absolute;
+    background-color: #ffeb3b;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+}
+
+.circle {
+    position: absolute;
+    background-color: #80cbc4;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulse 2.5s infinite alternate;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}

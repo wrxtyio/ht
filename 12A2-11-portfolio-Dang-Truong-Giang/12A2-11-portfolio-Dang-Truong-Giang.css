@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff0f5, #ffe6e6);
+    color: #4b0000;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    background-image: url('https://www.transparenttextures.com/patterns/flowers.png');
+}
+
+h1 {
+    color: #c40000;
+    font-style: oblique;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.4);
+    animation: slideInDown 1s ease-in-out;
+    background: linear-gradient(to right, #ff9999, #ffffff, #ff9999);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #800000;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 850px;
+    background: rgba(255, 245, 245, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    border: 2px solid #c40000;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.indent {
+    text-indent: 40px;
+    font-style: italic;
+    color: #880000;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    background: rgba(255, 240, 240, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.3);
+    border: 2px solid #c40000;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #ffcccc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+li {
+    background: linear-gradient(90deg, #ffcccc, #ffe6e6);
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 10px;
+    color: #600000;
+    transition: transform 0.3s, background 0.3s;
+    font-weight: bold;
+}
+
+li:hover {
+    transform: scale(1.1);
+    background: #ff6666;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+    border: 2px solid #c40000;
+    background: rgba(255, 240, 240, 0.8);
+}
+
+table, th, td {
+    border: 1px solid #c40000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    color: #550000;
+}
+
+th {
+    background-color: #ffb3b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    border: 3px solid #c40000;
+}
+
+img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
